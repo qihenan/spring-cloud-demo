@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.2.RELEASE</version>
+    <version>2.2.1.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>org.qhn</groupId>
@@ -21,26 +21,66 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-zipkin</artifactId>
-    </dependency>
+
+    <!--<dependency>-->
+    <!--<groupId>org.springframework.cloud</groupId>-->
+    <!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
+    <!--</dependency>-->
+
+    <!--SpringBoot 2.0 版本之后，官方已不推荐自己搭建定制，而是直接提供了编译好的 jar包-->
+    <!--<dependency>-->
+    <!--<groupId>io.zipkin.java</groupId>-->
+    <!--<artifactId>zipkin-server</artifactId>-->
+    <!--<version>2.12.3</version>-->
+    <!--<exclusions>-->
+    <!--<exclusion>-->
+    <!--<groupId>org.apache.logging.log4j</groupId>-->
+    <!--<artifactId>log4j-slf4j-impl</artifactId>-->
+    <!--</exclusion>-->
+    <!--</exclusions>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+    <!--<groupId>io.zipkin.java</groupId>-->
+    <!--<artifactId>zipkin-autoconfigure-ui</artifactId>-->
+    <!--<version>2.12.3</version>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+    <!--<groupId>org.springframework.cloud</groupId>-->
+    <!--<artifactId>spring-cloud-sleuth-zipkin2</artifactId>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+    <!--<groupId>org.springframework.cloud</groupId>-->
+    <!--<artifactId>spring-cloud-starter-sleuth</artifactId>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+    <!--<groupId>io.zipkin.zipkin2</groupId>-->
+    <!--<artifactId>zipkin</artifactId>-->
+    <!--<version>2.16.1</version>-->
+    <!--</dependency>-->
 
     <dependency>
-      <groupId>io.zipkin.java</groupId>
-      <artifactId>zipkin-server</artifactId>
-      <version>2.11.12</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.logging.log4j</groupId>
-          <artifactId>log4j-slf4j-impl</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.zipkin</groupId>
+      <artifactId>zipkin-server-exec</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/lib/zipkin-server-2.12.2-exec.jar</systemPath>
     </dependency>
+
+    <!--<dependency>-->
+      <!--<groupId>zipkin</groupId>-->
+      <!--<artifactId>zipkin-server</artifactId>-->
+      <!--<version>1.0.0</version>-->
+      <!--<scope>system</scope>-->
+      <!--<systemPath>${project.basedir}/src/main/resources/lib/zipkin-server-2.12.2.jar</systemPath>-->
+    <!--</dependency>-->
+
     <dependency>
-      <groupId>io.zipkin.java</groupId>
-      <artifactId>zipkin-autoconfigure-ui</artifactId>
-      <version>2.11.12</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
     <dependency>

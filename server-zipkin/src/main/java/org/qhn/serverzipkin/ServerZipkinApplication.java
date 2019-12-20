@@ -2,13 +2,13 @@ package org.qhn.serverzipkin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import zipkin2.server.internal.EnableZipkinServer;
+//import zipkin2.server.internal.EnableZipkinServer;
 
 @SpringBootApplication
-@EnableZipkinServer
+//@EnableZipkinServer
 public class ServerZipkinApplication {
 
-    //构建server-zipkin，只需要从网上下载jar包运行即可。https://dl.bintray.com/openzipkin/maven/io/zipkin/java/zipkin-server/
+    //不需要Application，直接运行java -jar ： java -jar zipkin-server-2.12.2-exec.jar命令启动
     public static void main(String[] args) {
         SpringApplication.run(ServerZipkinApplication.class, args);
     }
